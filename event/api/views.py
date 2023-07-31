@@ -19,7 +19,7 @@ from event.api.serializers import (
 )
 
 class GoogleCalendarViewSet(viewsets.ViewSet):
-    # permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
 
     @action(detail=False, methods=["get"])
     def connect_google_calendar(self, request):
